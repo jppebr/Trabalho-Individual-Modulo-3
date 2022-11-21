@@ -9,6 +9,10 @@ const computadores = []
 const perifericos = []
 const notebooks = []
 
+
+
+//---------------------------------------Computadores---------------------------------------------//
+
 app.get('/computadores', (request, response) => {
     return response.json(computadores)
 })//Visualizar
@@ -41,6 +45,9 @@ app.listen(8181, () => {
     console.log('O Servidor foi iniciado!')
 })
 
+
+///------------------Perifericos-----------------------------------//
+
 app.get('/perifericos', (request, response) => {
     return response.json(perifericos)
 })//Visualizar
@@ -68,7 +75,7 @@ app.delete('/perifericos/:id', (request, response) => {
     return response.status(204).send()
 })
 
-
+//----------------------------------------------------Notebooks--------------------//
 
 app.get('/notebooks', (request, response) => {
     return response.json(notebooks)
